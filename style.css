@@ -2,7 +2,17 @@
 
 body {
     font-family: 'Cabin';
-    background-color: #758190;
+    /* background-color: #758190; */
+    background-color: #001f3f;
+    color: #949fad;
+}
+a{
+    text-decoration: none;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 20px;
+    color: inherit;
+    
 }
 
 #tentacles {
@@ -12,28 +22,66 @@ body {
 .header {
     display: flex;
     background-color: lightblue;
-    padding: 1%;
+    padding: 2%;
     align-items: center;
+    justify-content: space-between;
     margin-left: -10px;
     margin-right: -10px;
     margin-top: -10px;
+    color: #001f3f;
 }
 
+.logo{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-left: 10px;
+    
+}
+
+.section-links{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #00172f; */
+    width: 150px;
+    padding: 1em;
+}
+a:hover{
+    text-decoration: underline;
+    transform: scale(1.2);
+}
 .stats-container {
     display: flex;
+    align-items: center;
+    cursor: pointer;
+    /*box-shadow: 0 0 30px lightblue;*/
+    
 }
 
-.stats-card {
+.stats-card,.game-card {
     background-color: #a8b0bc;
     border-radius: 7px;
     padding: 1%;
-    margin: 1%;
+    margin: 3%;
     width: 100%;
     text-align: center;
+    
+    border-radius: 7px;
+    background: #001f3f;
+    box-shadow:  7px 7px 0px #00172f,
+             -7px -7px 0px #00274f;
 }
-
+.margin-left{
+    margin-left: 2rem;
+}
+p.margin-left, div.margin-left{
+    margin-left: 3rem;
+}
 #num-contributions, #total-raised, #num-games {
-    font-size: 50px;
+    font-size: 70px;
+}
+h2{
+    font-size: 30px;
 }
 
 #games-container {
@@ -49,17 +97,21 @@ body {
 }
 
 .game-card {
-    background-color: #FFFFFF;
+    background-color: lightblue;
     padding: 1%;
     margin: 1%;
     width: 300px;
     text-align: center;
     border-radius: 7px;
+    color: #00172f;
 }
 
 .game-card:hover {
     cursor: pointer;
     box-shadow: 0 0 30px lightblue;
+    border-radius: 7px;
+    background: #add8e6;
+
 }
 
 #button-container {
@@ -68,8 +120,26 @@ body {
 
 button {
     font-family: 'Cabin';
+    font-size: 1rem;
     border: none;
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+background: lightblue;
+box-shadow: inset 7px 7px 38px #80a0aa,
+            inset -7px -7px 38px #daffff;
+  
+}
+
+button:hover,
+button:active{
+    
+
+  border-radius: 7px;
+background: #add8e6;
+box-shadow:  7px 7px 38px #80a0aa,
+            inset -7px -7px 38px #daffff;
+    transition: transfrom 5s ease-in-out;
+    transform: scale(1.2);
+  
 }
